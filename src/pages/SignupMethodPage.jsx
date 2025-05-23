@@ -13,7 +13,8 @@ const SignupMethodPage = () => {
 
     const handleKakaoLogin = () => {
         const REST_API_KEY = "65295b9472b38097d11e3a81dd2b5983";
-        const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home";
+        // const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home";
+        const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home/#/oauth/kakao/callback";
     
         const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
     
