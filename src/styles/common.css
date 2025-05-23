@@ -1,0 +1,70 @@
+
+html,body,#root {width: 100%;}
+
+/* html,body,form,div,h1,h2,input{margin:0; padding:0; box-sizing: border-box;}
+
+a,*:visited,*:link,*:focus,button{text-decoration:none; color:inherit; outline:none; border:0; transition:all 0.3s ease; -webkit-transition:all 0.9s ease;}
+body {margin:0; background-color:#fff; font-size:16px; font-family:'noto sans kr','맑은고딕',MG,sans-serif;}
+
+
+ul, ol, li {margin:0; padding:0; list-style:none; font-size:100%;}
+table{border-collapse:separate; border-spacing:0;}
+input{vertical-align:middle;}
+img{vertical-align:middle;}
+label{display:inline-block;}
+
+.img-area {width: 100%;}
+
+@-moz-keyframes borderscale {50% {box-shadow: 0 0 0 2px #999;}}
+@-webkit-keyframes borderscale {50% {box-shadow: 0 0 0 2px #999;}}
+@keyframes borderscale {50% {box-shadow: 0 0 0 2px #999;}}
+.form input {-webkit-appearance:none; -webkit-border-radius:0;}
+.form input[type="checkbox"],
+.form input[type="radio"] {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
+.form input[type="checkbox"]:hover + span:before,
+.form input[type="checkbox"]:focus + span:before,
+.form input[type="radio"]:hover + span:before,
+.form input[type="radio"]:focus + span:before {border-color:#999;}
+.form input[type="checkbox"]:active + span:before,
+.form input[type="radio"]:active + span:before {transition-duration:0; filter:brightness(0.2);}
+.form input[type="checkbox"] + span,
+.form input[type="radio"] + span {position:relative; padding:0 4px 0 22px; font-weight:normal; margin:3px 0;}
+.form input[type="checkbox"] + span:before, 
+.form input[type="checkbox"] + span:after,
+.form input[type="radio"] + span:before, 
+.form input[type="radio"] + span:after {box-sizing:content-box; position:absolute; content:''; display:block; left:0;}
+.form input[type="checkbox"] + span:before,
+.form input[type="radio"] + span:before {top:50%; width:14px; height:14px; border:2px solid #d9d9d9; text-align:center; transform:translateY(-50%);}
+.form input[type="checkbox"] + span:after,
+.form input[type="radio"] + span:after {background-color:#000;  top:50%; left:6px; width:8px; height:8px; line-height:1.4px; margin-top:-4px; transform:scale(0); transform-origin:50%; transition:transform 200ms ease-out;}
+.form input[type="radio"]:checked + span:after {transform:scale(1);}
+.form input[type="radio"] + span:before {border-radius:50%;}
+.form input[type="checkbox"] + span:after,
+.form input[type="radio"] + span:after {background-color:transparent; top:50%; left:0; width:20px; height:10px; margin-top:-5px; border-style:solid; border-color:#000; border-width:0 0 3px 3px; -moz-transform:rotate(-45deg) scale(0); -ms-transform:rotate(-45deg) scale(0); -webkit-transform:rotate(-45deg) scale(0); transform:rotate(-45deg) scale(0); -moz-transition:none; -o-transition:none; -webkit-transition:none; transition:none;} input[type="checkbox"]:checked + span:before,
+.form input[type="radio"]:checked + span:before {-moz-animation:borderscale 200ms ease-in; -webkit-animation:borderscale 200ms ease-in; animation:borderscale 200ms ease-in;}
+.form input[type="checkbox"]:checked + span:after,
+.form input[type="radio"]:checked + span:after {content:''; -moz-transform:rotate(-45deg) scale(1) translate(29%, -43%); -ms-transform:rotate(-45deg) scale(1) translate(29%, -43%); -webkit-transform:rotate(-45deg) scale(1) translate(29%, -43%); transform:rotate(-45deg) scale(1) translate(29%, -43%); -moz-transition:-moz-transform 200ms ease-out; -o-transition:-o-transform 200ms ease-out; -webkit-transition:-webkit-transform 200ms ease-out; transition:transform 200ms ease-out;}
+
+@media screen and (max-width: 818px){
+	#wrap{width:100%;}
+	.form .agBox{font-size:90%; letter-spacing:-1px;}
+}
+
+@media screen and (max-width: 640px){
+	body{font-size:14px;}
+}
+
+@media screen and (max-width: 500px){
+
+}
+
+@media screen and (max-width: 415px){
+}
+
+@media screen and (max-width: 375px){
+	body{font-size:12px;}
+}
+
+@media screen and (max-width: 320px){
+	body{font-size:10px;}
+} */

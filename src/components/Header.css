@@ -1,0 +1,6 @@
+.header {margin-bottom: var(--main-grid); padding: var(--main-grid); border-bottom: 0.15em solid #000;}
+.header .header-inner {margin: 0 auto; display: flex; gap: 1em; justify-content: space-between; width: 100%; max-width: 850px; box-sizing: border-box;}
+.header .header-left {font-size: 3em;}
+.header .header-right {display: flex; gap: 1em; align-items: center; justify-content: flex-end; font-size: 1.7em;} 
+.header .header-right li {font-weight: 500; list-style: none; color: #999;} 
+.header .header-right li a {text-decoration: none; color: inherit;}
