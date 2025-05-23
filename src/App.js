@@ -8,13 +8,13 @@ import KakaoCallbackPage from "./pages/KakaoCallbackPage";
 
 function App() {
   return (
-    <HashRouter>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<SignupMethodPage />} />
         <Route path="/oauth/kakao/callback" element={<KakaoCallbackPage />} />
       </Routes>
-    </HashRouter>
+    </>
   );
 }
 
