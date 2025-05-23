@@ -11,9 +11,14 @@ const SignupMethodPage = () => {
         alert("이메일 회원가입 페이지로 이동합니다");
     };
 
-    const handleKakaoSignup = () => {
-        alert("카카오 로그인 연동");
-    };
+    const handleKakaoLogin = () => {
+        const REST_API_KEY = "65295b9472b38097d11e3a81dd2b5983";
+        const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home";
+    
+        const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+    
+        window.location.href = KAKAO_AUTH_URL;
+    };    
 
     const handleNaverSignup = () => {
         alert("네이버 로그인 연동");
@@ -36,7 +41,7 @@ const SignupMethodPage = () => {
                     <div className="btn email" onClick={handleEmailSignup}>
                         <MdEmail /> USLOG로 회원가입
                     </div>
-                    <div className="btn kakao" onClick={handleKakaoSignup}>
+                    <div className="btn kakao" onClick={handleKakaoLogin}>
                         <RiKakaoTalkFill /> 카카오로 회원가입
                     </div>
                     <div className="btn naver" onClick={handleNaverSignup}>
