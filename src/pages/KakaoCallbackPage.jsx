@@ -3,7 +3,9 @@ import axios from "axios";
 
 const KakaoCallbackPage = () => {
     useEffect(() => {
-    const code = new URL(window.location.href).searchParams.get("code");
+    // HashRouter를 쓰는 경우, 인가코드는 hash 안에 들어옴
+    const hash = window.location.hash; 
+    const code = new URLSearchParams(hash.split("?")[1]).get("code");
     console.log("💡 인가코드:", code);
 
     const REST_API_KEY = "6z9589b34782e013148d1db2d5983f";
@@ -14,8 +16,8 @@ const KakaoCallbackPage = () => {
 
     const REDIRECT_URI =
     process.env.NODE_ENV === "development"
-        ? "http://localhost:3000/"
-        : "https://seojihee4016.github.io/uslog-home/";
+        ? "http://localhost:3000"
+        : "https://seojihee4016.github.io/uslog-home";
 
     const TOKEN_API_URL = "https://kauth.kakao.com/oauth/token";
 
