@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,9 +12,13 @@ root.render(
   //   <App />
   // </React.StrictMode>
 
-  <HashRouter>
-    <App />
-  </HashRouter>
+  // <HashRouter>
+  //   <App />
+  // </HashRouter>
+
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
