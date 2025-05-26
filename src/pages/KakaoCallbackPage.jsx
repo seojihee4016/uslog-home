@@ -7,7 +7,16 @@ const KakaoCallbackPage = () => {
     console.log("💡 인가코드:", code);
 
     const REST_API_KEY = "6z9589b34782e013148d1db2d5983f";
-    const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home";
+    // 배포용
+    // const REDIRECT_URI = "https://seojihee4016.github.io/uslog-home";
+    // 테스트용
+    // const REDIRECT_URI = "http://localhost:3000/#/oauth/kakao/callback";
+
+    const REDIRECT_URI =
+    process.env.NODE_ENV === "development"
+        ? "http://localhost:3000/#/oauth/kakao/callback"
+        : "https://seojihee4016.github.io/uslog-home/#/oauth/kakao/callback";
+
     const TOKEN_API_URL = "https://kauth.kakao.com/oauth/token";
 
     const getToken = async () => {
