@@ -14,8 +14,8 @@ const KakaoCallbackPage = () => {
 
     const REDIRECT_URI =
     process.env.NODE_ENV === "development"
-        ? "http://localhost:3000/#/oauth/kakao/callback"
-        : "https://seojihee4016.github.io/uslog-home/#/oauth/kakao/callback";
+        ? "http://localhost:3000/"
+        : "https://seojihee4016.github.io/uslog-home/";
 
     const TOKEN_API_URL = "https://kauth.kakao.com/oauth/token";
 
