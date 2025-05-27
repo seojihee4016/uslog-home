@@ -23,8 +23,8 @@ const KakaoCallbackPage = () => {
         const REDIRECT_URI =
         process.env.NODE_ENV === "development"
             ? "http://localhost:3000/oauth/kakao/callback"
-            : "https://seojihee4016.github.io/uslog-home/oauth/kakao/callback";
-
+            : "https://uslog-home.netlify.app/oauth/kakao/callback";
+            
         const getToken = async () => {
         try {
             // 1. 액세스 토큰 요청
