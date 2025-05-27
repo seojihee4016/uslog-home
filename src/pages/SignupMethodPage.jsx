@@ -20,7 +20,7 @@ const SignupMethodPage = () => {
 
         const REDIRECT_URI =
         process.env.NODE_ENV === "development"
-            ? "http://localhost:3000"
+            ? "http://localhost:3000/oauth/kakao/callback"
             : "https://uslog-home.netlify.app/oauth/kakao/callback";
             // : "https://seojihee4016.github.io/uslog-home";
     
