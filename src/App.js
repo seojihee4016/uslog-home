@@ -43,9 +43,9 @@ const RedirectHandler = () => {
 
 function App() {
   return (
-    // <Router>
+    <Router>
       <RedirectHandler />
-    // </Router>
+    </Router>
   );
 }
 

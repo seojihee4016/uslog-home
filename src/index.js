@@ -9,9 +9,9 @@ const basename = process.env.NODE_ENV === "development" ? "/" : "/uslog-home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename={basename}>
+  // <BrowserRouter basename={basename}>
     <App />
-  </BrowserRouter>
+  // </BrowserRouter>
 );
 
 reportWebVitals();
