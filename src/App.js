@@ -12,11 +12,10 @@ import "./styles/common.css";
 import SignupMethodPage from "./pages/SignupMethodPage";
 import KakaoCallbackPage from "./pages/KakaoCallbackPage";
 
-// Router 환경 구분
+// 개발 환경: BrowserRouter, 배포 환경: HashRouter 사용
 const Router =
   process.env.NODE_ENV === "development" ? BrowserRouter : HashRouter;
 
-// 인가코드가 있으면 자동으로 콜백 페이지로 이동
 const RedirectHandler = () => {
   const navigate = useNavigate();
 
@@ -44,9 +43,9 @@ const RedirectHandler = () => {
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <RedirectHandler />
-    </Router>
+    // </Router>
   );
 }
 
