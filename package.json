@@ -1,6 +1,7 @@
 {
   "name": "uslog",
-  "homepage": "https://seojihee4016.github.io/uslog-home",
+  "_note": "Netlify 배포용 homepage는 https://uslog-home.netlify.app 로 설정해야 함",
+  "homepage": "https://uslog-home.netlify.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
