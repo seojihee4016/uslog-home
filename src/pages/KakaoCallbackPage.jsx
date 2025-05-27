@@ -7,7 +7,7 @@ const KakaoCallbackPage = () => {
         let code;
 
         // HashRouter를 쓰는 경우, 인가코드는 hash 안에 들어옴
-        const hash = window.location.hash;
+        // const hash = window.location.hash;
 
         if (window.location.search) {
             // BrowserRouter 환경 (로컬/배포 공통)
