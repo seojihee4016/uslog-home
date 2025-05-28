@@ -3,6 +3,7 @@ import axios from "axios";
 import qs from "qs";
 
 const KakaoCallbackPage = () => {
+    
     useEffect(() => {
         let code;
 
@@ -25,7 +26,7 @@ const KakaoCallbackPage = () => {
             ? "http://localhost:3000/oauth/kakao/callback"
             : "https://uslog-home.netlify.app/oauth/kakao/callback";
             
-        const getToken = async () => {
+        const getToken = async (code) => {
         try {
             // 1. 액세스 토큰 요청
             const tokenRes = await axios.post(
@@ -75,7 +76,7 @@ const KakaoCallbackPage = () => {
         }
         };
 
-        if (code) getToken();
+        if (code) getToken(code);
     }, []);
 
     return <div>카카오 로그인 중입니다...</div>;
