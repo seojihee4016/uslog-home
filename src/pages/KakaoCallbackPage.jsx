@@ -62,8 +62,18 @@ const KakaoCallbackPage = () => {
             const kakaoId = userRes.data.id;
             console.log("사용자 정보:", userRes.data);
 
+            const backendUrl =
+            process.env.NODE_ENV === "development"
+                ? "http://localhost:4000/test"
+                : "https://uslog-backend-production.up.railway.app/test"; // 도메인 누락 없이 https 포함!
+            
             // 3. 사용자 ID를 백엔드로 전송
-            const backendRes = await axios.post("/test", { kakaoId });
+            const backendRes = await axios.post(backendUrl, { kakaoId });
+            //   const backendRes = await axios.post("/test", { kakaoId });
+            console.log("백엔드로 사용자 ID 전송 성공");
+            console.log("백엔드 응답:", backendRes.data);
+            alert(backendRes.data.message);
+
             console.log("백엔드로 사용자 ID 전송 성공");
             console.log("백엔드 응답:", backendRes.data);
 

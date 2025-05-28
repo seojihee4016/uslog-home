@@ -6,7 +6,8 @@ require("dotenv").config(); // .env 환경변수 불러오기
 const User = require("./models/User"); // 사용자 스키마 불러오기
 
 const app = express();
-const PORT = 4000;
+// Railway를 위한 포트 번호 설정
+const PORT = process.env.PORT || 4000;
 
 // 미들웨어 설정
 app.use(cors());
