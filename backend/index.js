@@ -10,7 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // 미들웨어 설정
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: ["https://uslog-home.netlify.app"], // 프론트 주소
+    methods: ["POST", "OPTIONS"], 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
