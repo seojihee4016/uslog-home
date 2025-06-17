@@ -70,6 +70,8 @@ const KakaoCallbackPage = () => {
                 
                 const backendUrl = `${process.env.REACT_APP_BACKEND_URL}/test`;
 
+                console.log("백엔드 URL:", process.env.REACT_APP_BACKEND_URL);
+
                 // 3. 사용자 ID를 백엔드로 전송
                 const backendRes = await axios.post(backendUrl, { kakaoId });
                 //   const backendRes = await axios.post("/test", { kakaoId });
