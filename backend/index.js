@@ -8,6 +8,8 @@ const User = require("./models/User"); // 사용자 스키마 불러오기
 const app = express();
 // Railway를 위한 포트 번호 설정
 const PORT = process.env.PORT || 4000;
+console.log("실제 PORT:", PORT);
+console.log("환경변수 PORT:", process.env.PORT);
 
 // 미들웨어 설정
 // app.use(cors());
