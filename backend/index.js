@@ -49,9 +49,13 @@ app.post("/test", async (req, res) => {
     }
 });
 
+app.get("/ping", (req, res) => {
+    res.send("pong");
+});
+
 const HOST = '0.0.0.0'; // Railway 외부 접근 허용
 
 // 서버 시작
 app.listen(PORT, HOST, () => {
-  console.log(`✅ 백엔드 서버 실행됨 > http://${HOST}:${PORT}`);
+    console.log(`✅ 백엔드 서버 실행됨 > http://${HOST}:${PORT}`);
 });
