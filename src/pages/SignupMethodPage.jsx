@@ -3,12 +3,15 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { FaLeaf } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; 
 
 import "../styles/SignupMethodPage.css";
 
 const SignupMethodPage = () => {
+    const navigate = useNavigate(); 
+
     const handleEmailSignup = () => {
-        window.location.href = "/signup/email";
+        navigate("/signup/email"); // SPA 방식 라우팅, 화면 전환만 발생하도록
         alert("이메일 회원가입 페이지로 이동합니다");
     };
 
