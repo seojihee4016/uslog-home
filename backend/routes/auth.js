@@ -47,12 +47,16 @@ router.post('/send-code', async (req, res) => {
         },
     });
 
+    console.log("메일 전송 시도 중...");
+
     await transporter.sendMail({
         from: process.env.EMAIL_USER,
         to: email,
         subject: "[uslog] 이메일 인증번호입니다",
         text: `인증번호는 ${code} 입니다. 5분 내에 입력해 주세요.`,
     });
+
+    console.log("메일 전송 성공");
 
     res.json({ message: "인증번호를 전송했습니다." });
     } catch (err) {
