@@ -17,6 +17,33 @@ const SignupEmailPage = () => {
     const [isVerified, setIsVerified] = useState(false); // 인증 안된 유저 막기
 
     // 유효성 메시지 함수
+    const validate = () => {
+        const newErrors = {};
+        
+        if (!email) {
+            newErrors.email = '이메일을 입력해주세요.';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            newErrors.email = '유효한 이메일을 입력해주세요.';
+        }
+        
+        if (!authCode) {
+            newErrors.authCode = '인증번호를 입력해주세요.';
+        }
+        
+        if (!password) {
+            newErrors.password = '비밀번호를 입력해주세요.';
+        } else if (password.length < 8 || password.length > 16) {
+            newErrors.password = '비밀번호는 8~16자 사이여야 합니다.';
+        }
+        
+        if (password !== confirmPassword) {
+            newErrors.confirmPassword = '비밀번호가 일치하지 않습니다.';
+        }
+        
+    setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     const handleSignup = async (e) => {
         e.preventDefault();
         if (!isVerified) {
@@ -25,33 +52,6 @@ const SignupEmailPage = () => {
         }
         
         if (!validate()) return;
-
-        const validate = () => {
-            const newErrors = {};
-            
-            if (!email) {
-                newErrors.email = '이메일을 입력해주세요.';
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                newErrors.email = '유효한 이메일을 입력해주세요.';
-            }
-            
-            if (!authCode) {
-                newErrors.authCode = '인증번호를 입력해주세요.';
-            }
-            
-            if (!password) {
-                newErrors.password = '비밀번호를 입력해주세요.';
-            } else if (password.length < 8 || password.length > 16) {
-                newErrors.password = '비밀번호는 8~16자 사이여야 합니다.';
-            }
-            
-            if (password !== confirmPassword) {
-                newErrors.confirmPassword = '비밀번호가 일치하지 않습니다.';
-            }
-            
-        setErrors(newErrors);
-            return Object.keys(newErrors).length === 0;
-        };
         
         try {
             const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
@@ -82,16 +82,16 @@ const SignupEmailPage = () => {
     // 인증번호 확인 함수
     const handleVerifyCode = async () => {
         try {
-            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
-                email,
-                authCode,
-            });
+            // const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
+            //     email,
+            //     authCode,
+            // });
             // setMessage(res.data.message); 
             setMessage("인증되었습니다.");
             setIsVerified(true); // 인증 성공 상태 업데이트
 
         } catch (err) {
-            const errorMsg = err.response?.data?.message || '인증 실패';
+            // const errorMsg = err.response?.data?.message || '인증 실패';
             // setMessage(errorMsg);
             setMessage("이메일 인증을 먼저 진행해주세요."); // 실패 시 false로 안전하게 초기화
             return;
