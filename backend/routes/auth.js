@@ -56,7 +56,8 @@ router.post('/send-code', async (req, res) => {
 
     res.json({ message: "인증번호를 전송했습니다." });
     } catch (err) {
-    res.status(500).json({ message: "메일 전송 실패", error: err });
+        console.error("메일 전송 실패:", err);
+        res.status(500).json({ message: "메일 전송 실패", error: err });
     }
 });
 
