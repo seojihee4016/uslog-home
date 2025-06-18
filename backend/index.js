@@ -1,8 +1,9 @@
+require("dotenv").config(); // .env 환경변수 불러오기
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
-require("dotenv").config(); // .env 환경변수 불러오기
 
 const User = require("./models/User"); // 사용자 스키마 불러오기
 
