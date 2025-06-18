@@ -8,6 +8,7 @@ import "../styles/SignupMethodPage.css";
 
 const SignupMethodPage = () => {
     const handleEmailSignup = () => {
+        window.location.href = "/signup/email";
         alert("이메일 회원가입 페이지로 이동합니다");
     };
 
@@ -50,8 +51,9 @@ const SignupMethodPage = () => {
 
                 <div className="signup-buttons">
                     <div className="btn email" onClick={handleEmailSignup}>
-                        <MdEmail /> USLOG로 회원가입
+                        <MdEmail /> 이메일로 회원가입
                     </div>
+
                     <div className="btn kakao" onClick={handleKakaoLogin}>
                         <RiKakaoTalkFill /> 카카오로 회원가입
                     </div>

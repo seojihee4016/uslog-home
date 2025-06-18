@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const authRoutes = require("./routes/auth");
 require("dotenv").config(); // .env 환경변수 불러오기
 
 const User = require("./models/User"); // 사용자 스키마 불러오기
@@ -18,6 +19,7 @@ app.use(cors({
     methods: ["POST", "OPTIONS"], 
 }));
 app.use(express.json());
+app.use("/auth", authRoutes); // 이메일 회원 가입
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB 연결

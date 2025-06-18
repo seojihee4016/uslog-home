@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import "./styles/common.css";
 import SignupMethodPage from "./pages/SignupMethodPage";
 import KakaoCallbackPage from "./pages/KakaoCallbackPage";
+import SignupEmailPage from "./pages/SignupEmailPage";
 
 // 개발 환경: BrowserRouter, 배포 환경: HashRouter 사용
 const Router =
@@ -35,6 +36,7 @@ const RedirectHandler = () => {
       <Header />
       <Routes>
         <Route path="/" element={<SignupMethodPage />} />
+        <Route path="/signup/email" element={<SignupEmailPage />} />
         <Route path="/oauth/kakao/callback" element={<KakaoCallbackPage />} />
       </Routes>
     </>
