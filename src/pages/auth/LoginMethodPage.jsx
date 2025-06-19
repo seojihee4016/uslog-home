@@ -13,7 +13,7 @@ const LoginMethodPage = () => {
                 </div>
 
                 <div className="login-buttons">
-                    <Link to="/login" className="btn email">
+                    <Link to="/login/email" className="btn email">
                         <MdEmail /> 이메일로 로그인
                     </Link>
                     <div className="btn kakao">
