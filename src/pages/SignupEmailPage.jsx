@@ -108,7 +108,7 @@ const SignupEmailPage = () => {
                         <label className="signup-label" htmlFor="email">이메일</label>
                         <div className="email-area">
                             <input type="email" className={errors.email ? 'error' : ''} id="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일" />
-                            {errors.email && <p className="error-msg">{errors.email}</p>}
+                            {errors.email && <div className="error-msg">{errors.email}</div>}
                             <button type="button" className="btn-send-code" onClick={handleSendCode}>인증번호 전송</button>
                         </div>
                     </li>
@@ -117,7 +117,7 @@ const SignupEmailPage = () => {
                         <label className="signup-label" htmlFor="authCode">인증번호</label>
                         <div className="email-area">
                             <input type="text" className={errors.authCode ? 'error' : ''} id="authCode" value={authCode} onChange={(e) => setAuthCode(e.target.value)} required placeholder="인증번호 입력 (유효시간 5분)" />
-                            {errors.authCode && <p className="error-msg">{errors.authCode}</p>}
+                            {errors.authCode && <div className="error-msg">{errors.authCode}</div>}
                             <button type="button" className="btn-verify-code" onClick={handleVerifyCode}>인증번호 확인</button>
                         </div>
                     </li>
@@ -125,13 +125,13 @@ const SignupEmailPage = () => {
                     <li className="signup-item">
                         <label className="signup-label" htmlFor="password">비밀번호</label>
                         <input type="password" className={errors.password ? 'error' : ''} id="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="비밀번호" />
-                        {errors.password && <p className="error-msg">{errors.password}</p>}
+                        {errors.password && <div className="error-msg">{errors.password}</div>}
                     </li>
 
                     <li className="signup-item">
                         <label className="signup-label" htmlFor="confirmPassword">비밀번호 확인</label>
                         <input type="password" className={errors.confirmPassword ? 'error' : ''} id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required placeholder="비밀번호 확인" />
-                        {errors.confirmPassword && <p className="error-msg">{errors.confirmPassword}</p>}
+                        {errors.confirmPassword && <div className="error-msg">{errors.confirmPassword}</div>}
                     </li>
                 </ul>
 

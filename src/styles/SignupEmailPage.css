@@ -16,7 +16,7 @@ body {font-size: 10px;}
 .signup-form .signup-list .signup-item input:focus {border-color: #000 !important; outline: none;}
 /* .signup-form .signup-list .signup-item input:focus::placeholder {color: #000;} */
 .signup-form .signup-list .signup-item input.error {border-color: #f42731 !important;}
-.signup-form .signup-list .signup-item input.error-msg {color: #f42731; font-size: 1.2rem; margin-top: 0.3em;}
+.signup-form .signup-list .signup-item .error-msg {grid-column: 1 / 3; font-size: 1.4em; color: #f42731;}
 
 /* 이메일 영역 */
 .signup-form .signup-list .signup-item .email-area {display: grid; grid-template-columns: 36em 1fr; gap: 2em; width: 100%; height: 100%;}
