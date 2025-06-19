@@ -12,6 +12,7 @@ import "./styles/common.css";
 import SignupMethodPage from "./pages/SignupMethodPage";
 import KakaoCallbackPage from "./pages/KakaoCallbackPage";
 import SignupEmailPage from "./pages/SignupEmailPage";
+import LoginMethodPage from "./pages/LoginMethodPage";
 
 // 개발 환경: BrowserRouter, 배포 환경: HashRouter 사용
 const Router =
@@ -38,6 +39,7 @@ const RedirectHandler = () => {
         <Route path="/" element={<SignupMethodPage />} />
         <Route path="/signup/email" element={<SignupEmailPage />} />
         <Route path="/oauth/kakao/callback" element={<KakaoCallbackPage />} />
+        <Route path="/login" element={<LoginMethodPage />} />
       </Routes>
     </>
   );
