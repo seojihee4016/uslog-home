@@ -37,6 +37,9 @@ router.post('/send-code', async (req, res) => {
     global.emailCodes = global.emailCodes || {};
     global.emailCodes[email] = code;
 
+    console.log('USER:', process.env.EMAIL_USER);
+    console.log('PASS:', process.env.EMAIL_PASS);
+
     // nodemailer를 통한 메일 전송 설정
     try {
     const transporter = nodemailer.createTransport({
@@ -56,8 +59,6 @@ router.post('/send-code', async (req, res) => {
         text: `인증번호는 ${code} 입니다. 5분 내에 입력해 주세요.`,
     });
 
-    console.log('USER:', process.env.EMAIL_USER);
-    console.log('PASS:', process.env.EMAIL_PASS);
     console.log("메일 전송 성공");
 
     res.json({ message: "인증번호를 전송했습니다." });
