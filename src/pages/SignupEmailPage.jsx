@@ -44,24 +44,30 @@ const SignupEmailPage = () => {
         return Object.keys(newErrors).length === 0;
     };
 
+    // 회원가입
     const handleSignup = async (e) => {
         e.preventDefault();
         if (!isVerified) {
             setMessage("이메일 인증을 먼저 진행해주세요.");
             return;
         }
-        
+    
         if (!validate()) return;
-        
+    
         try {
             const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
                 email,
                 password,
             });
-            
-            setMessage(res.data.message);
+        
+            if (res.data.message.includes("이미 존재")) {
+                alert(res.data.message);
+                return;
+            }
+            alert("회원가입이 완료되었습니다.");
+            setMessage(""); 
         } catch (err) {
-            const errorMsg = err.response?.data?.message || '회원가입 실패';
+            const errorMsg = err.response?.data?.message || "회원가입 실패";
             setMessage(errorMsg);
         }
     };
@@ -79,22 +85,19 @@ const SignupEmailPage = () => {
         }
     };
 
-    // 인증번호 확인 함수
+    // 인증번호 확인
     const handleVerifyCode = async () => {
         try {
-            // const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
-            //     email,
-            //     authCode,
-            // });
-            // setMessage(res.data.message); 
-            setMessage("인증되었습니다.");
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
+                email,
+                authCode,
+            });
             setIsVerified(true); // 인증 성공 상태 업데이트
-
+            alert("인증되었습니다.");
+            setMessage(""); // 가입 메시지 초기화
         } catch (err) {
-            // const errorMsg = err.response?.data?.message || '인증 실패';
-            // setMessage(errorMsg);
+            setIsVerified(false);
             setMessage("이메일 인증을 먼저 진행해주세요."); // 실패 시 false로 안전하게 초기화
-            return;
         }
     };
 
