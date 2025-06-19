@@ -2,7 +2,7 @@ import React from "react";
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import "../styles/LoginMethodPage.css";
+import "../../styles/LoginMethodPage.css";
 
 const LoginMethodPage = () => {
     return (

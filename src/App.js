@@ -9,10 +9,10 @@ import {
 
 import Header from "./components/Header";
 import "./styles/common.css";
-import SignupMethodPage from "./pages/SignupMethodPage";
-import KakaoCallbackPage from "./pages/KakaoCallbackPage";
-import SignupEmailPage from "./pages/SignupEmailPage";
-import LoginMethodPage from "./pages/LoginMethodPage";
+import SignupMethodPage from "./pages/auth/SignupMethodPage";
+import KakaoCallbackPage from "./pages/auth/KakaoCallbackPage";
+import SignupEmailPage from "./pages/auth/SignupEmailPage";
+import LoginMethodPage from "./pages/auth/LoginMethodPage";
 
 // 개발 환경: BrowserRouter, 배포 환경: HashRouter 사용
 const Router =

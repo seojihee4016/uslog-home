@@ -5,7 +5,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { FaLeaf } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; 
 
-import "../styles/SignupMethodPage.css";
+import "../../styles/SignupMethodPage.css";
 
 const SignupMethodPage = () => {
     const navigate = useNavigate(); 
