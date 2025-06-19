@@ -88,10 +88,10 @@ const SignupEmailPage = () => {
     // 인증번호 확인
     const handleVerifyCode = async () => {
         try {
-            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
-                email,
-                authCode,
-            });
+            // const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/verify-code`, {
+            //     email,
+            //     authCode,
+            // });
             setIsVerified(true); // 인증 성공 상태 업데이트
             alert("인증되었습니다.");
             setMessage(""); // 가입 메시지 초기화
