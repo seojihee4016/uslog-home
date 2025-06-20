@@ -5,7 +5,7 @@ body {font-size: 10px;}
     --main-grid: 2em;
 }
 
-.login-method {overflow: hidden; margin: 0 auto; padding: var(--main-padding); max-width: 700px; display: grid; gap: var(--main-grid);}
+.login-method {overflow: hidden; padding: var(--main-padding); max-width: 700px; display: grid; gap: var(--main-grid);}
 
 /* 로그인 방식 문구 */
 .login-method .select-method-txt {font-size: 2.4em; text-align: center; color: #343434;}
