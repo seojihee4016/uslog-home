@@ -2,7 +2,7 @@ import React from "react";
 
 import { MdEmail } from "react-icons/md";
 import { RiKakaoTalkFill } from "react-icons/ri";
-import { FaLeaf } from "react-icons/fa";
+// import { FaLeaf } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; 
 
 import "../../styles/SignupMethodPage.css";
@@ -35,9 +35,9 @@ const SignupMethodPage = () => {
         window.location.href = KAKAO_AUTH_URL;
     };    
 
-    const handleNaverSignup = () => {
-        alert("네이버 로그인 연동");
-    };
+    // const handleNaverSignup = () => {
+    //     alert("네이버 로그인 연동");
+    // };
 
     return (
         <>
@@ -60,9 +60,9 @@ const SignupMethodPage = () => {
                     <div className="btn kakao" onClick={handleKakaoLogin}>
                         <RiKakaoTalkFill /> 카카오로 회원가입
                     </div>
-                    <div className="btn naver" onClick={handleNaverSignup}>
+                    {/* <div className="btn naver" onClick={handleNaverSignup}>
                         <FaLeaf /> 네이버로 회원가입
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

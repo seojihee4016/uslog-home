@@ -8,7 +8,7 @@ body {font-size: 10px;}
 .signup-title {font-size: 3em; text-align: center;}
 
 /* 공통 CSS */
-.signup-form {overflow: hidden; margin: 0 auto; padding: var(--main-padding); max-width: 700px; display: grid; gap: var(--main-grid);}
+.signup-form {overflow: hidden; margin: 0 auto; padding: var(--main-padding); max-width: 700px; display: grid; gap: calc(var(--main-grid) + 5em);}
 .signup-form .signup-list {margin: 0; padding: 0; display: grid; gap: 5em;}
 .signup-form .signup-list .signup-item {display: grid; grid-template-columns: 12em 1fr; gap: 2em; align-items: center; list-style: none;}
 .signup-form .signup-list .signup-item .signup-label {font-size: 2em; font-weight: 500; color: #343434;}
