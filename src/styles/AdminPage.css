@@ -1,0 +1,26 @@
+body {font-size: 10px;}
+
+:root {
+    --main-padding: 4em;
+    --main-grid: 4em;
+}
+
+.admin-container {overflow: hidden; margin: 0 auto; padding: var(--main-padding); max-width: 900px; display: grid; gap: var(--main-grid);}
+
+/* 상단 텍스트 */
+.admin-container .admin-top-txt {font-size: 2.4em; text-align: center; color: #343434;}
+
+/* 테이블 헤드 CSS */
+.user-table {overflow: hidden;font-size: 1em; width: 100%; border-radius: 0.5em; border-collapse: collapse; box-shadow: 0 2px 5px rgba(0,0,0,.25);}  
+.user-table .user-table__head {font-weight: 700; border-bottom: 1px solid rgba(0,0,0,.1); color: #000; background: #73685d;}
+.user-table .user-table__head .user-table__head-row {}
+.user-table .user-table__head .user-table__head-row .user-table__head-cell {padding: 1em .5em; vertical-align: middle; font-size: 1.7em; text-align: center; color: #fff;}
+
+/* 테이블 바디 CSS */
+.user-table .user-table__body {}
+.user-table .user-table__body .user-table__body-row {}
+.user-table .user-table__body .user-table__body-row .user-table__body-cell {}
+
+@media screen and (max-width: 768px) {
+    body {font-size: 1.25vw;}
+}
