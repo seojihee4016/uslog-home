@@ -8,9 +8,14 @@ const AdminPage = () => {
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/admin/users`)
-        .then(res => setUsers(res.data))
-        .catch(err => alert("유저 정보를 불러오지 못했습니다."));
+            .then(res => {
+                console.log("전체 유저 목록:", res.data); // 배열 전체 확인용
+                res.data.forEach(u => console.log("유저:", u)); // 개별 확인용
+                setUsers(res.data);
+            })
+            .catch(err => alert("유저 정보를 불러오지 못했습니다."));
     }, []);
+    
 
 return (
         <div className="admin-container">
