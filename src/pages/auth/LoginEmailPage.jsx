@@ -20,7 +20,7 @@ const LoginEmailPage = () => {
             alert("로그인 성공");
             console.log("로그인 응답:", res.data);
 
-            navigate("/admin");
+            navigate("/");
         } catch (err) {
             const errorMsg = err.response?.data?.message || "로그인 실패";
             alert(errorMsg);
