@@ -20,7 +20,7 @@ body {font-size: 10px;}
 .user-table .user-table__body {}
 .user-table .user-table__body .user-table__body-row {}
 .user-table .user-table__body .user-table__body-row:not(:last-of-type) {border-bottom: 0.1em solid #ddd;}
-.user-table .user-table__body .user-table__body-row .user-table__body-cell {padding: 1em .5em; font-size: 1.8em;}
+.user-table .user-table__body .user-table__body-row .user-table__body-cell {padding: 1em .5em; font-size: 1.8em; text-align: center;}
 
 @media screen and (max-width: 768px) {
     body {font-size: 1.25vw;}

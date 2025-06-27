@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "../../styles/AdminPage.css";
 
 const AdminPage = () => {
+    const { user } = useAuth(); 
+    const navigate = useNavigate(); 
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        if (user?.email !== "jiheeseooooo@gmail.com") {
+            navigate("/access-denied");
+        }
+
         axios.get(`${process.env.REACT_APP_BACKEND_URL}/admin/users`)
             .then(res => {
+                setUsers(res.data); // 관리자면 유저 리스트 불러오기
+
                 console.log("전체 유저 목록:", res.data); // 배열 전체 확인용
                 res.data.forEach(u => console.log("유저:", u)); // 개별 확인용
-                setUsers(res.data);
             })
             .catch(err => alert("유저 정보를 불러오지 못했습니다."));
-    }, []);
+    }, [user]);
     
 
 return (
