@@ -22,9 +22,8 @@ const AdminPage = () => {
                 res.data.forEach(u => console.log("유저:", u)); // 개별 확인용
             })
             .catch(err => alert("유저 정보를 불러오지 못했습니다."));
-    }, [user]);
+    }, [user, navigate]);
     
-
 return (
         <div className="admin-container">
             <div className="admin-top-txt">관리자 페이지</div>
